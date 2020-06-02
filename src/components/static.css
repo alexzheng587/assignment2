@@ -10,29 +10,33 @@ body {
     background-color: #ececee;
 }
 
-button, input {
-    background-color: #c2bd76;
+button {
+    background: darkgrey;
+}
+
+input {
+    background: darkgrey;
 }
 
 .text_input {
     width: 200px;
     height: 100px;
-    background-color: #c2bd76;
+    background: #c2bd76;
 }
 
 .control {
     width: 100px;
 }
 
-.msgLine {
+.messageLine {
     margin-top: 10px;
 }
 
-.msgLine button {
+.messageLine button {
     vertical-align: middle;
 }
 
-.msgLine span {
+.messageLine span {
     display: inline-block;
     width: 450px;
     margin-left: 5px;

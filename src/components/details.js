@@ -32,7 +32,11 @@ class Details extends React.Component {
                 </div>
             )
         }
-        return <button onClick={this.showDetails}>Show Details</button>
+        return  ( <div className="messageLine">
+            <button onClick={this.showDetails}>Show Details</button>
+            <span>{this.props.message}</span>
+            </div>
+        )
     }
 }
 

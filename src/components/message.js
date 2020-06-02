@@ -7,9 +7,8 @@ class Message extends Component {
     render() {
         // using classname since id is taken up by messageId
         return (
-            <div id={this.props.messageId} className="msgLine">
+            <div id={this.props.messageId} className="messageLine">
                 <button onClick={() => this.props.deleteMessage(this.props.messageId)} type="button">Delete</button>
-                <span>{this.props.messageText}</span>
                 <Details message={this.props.messageText}/>
             </div>
         )
