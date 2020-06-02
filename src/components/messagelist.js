@@ -6,7 +6,7 @@ class MessageList extends React.Component {
     render() {
         return (
             <div id="messageList">
-                {this.props.msgList.map((message, index) => (
+                {this.props.messages.map((message, index) => (
                     <Message key={index} messageText={message} messageId={index} />
                 ))}
             </div>
@@ -15,7 +15,7 @@ class MessageList extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return { msgList: state.messages}
+    return { messages: state.messages}
 }
 
 export default connect(mapStateToProps)(MessageList);

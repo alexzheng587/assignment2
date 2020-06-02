@@ -5,6 +5,7 @@ import { deleteMessage } from '../actions'
 
 class Message extends Component {
     render() {
+        // using classname since id is taken up by messageId
         return (
             <div id={this.props.messageId} className="msgLine">
                 <button onClick={() => this.props.deleteMessage(this.props.messageId)} type="button">Delete</button>

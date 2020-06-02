@@ -8,7 +8,6 @@ body {
 
 .panel {
     background-color: #ececee;
-    border-radius: 5px;
 }
 
 button, input {
@@ -49,14 +48,12 @@ button, input {
 }
 
 #menu_side {
-    float: left;
-    width: 200px;
-    margin-right:10px;
+    width: 250px;
+    margin-bottom:10px;
     padding: 10px;
 }
 
 #content_side {
-    float:left;
     width: 500px;
     padding: 10px;
 }

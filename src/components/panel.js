@@ -16,7 +16,7 @@ class Panel extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return { message: state.message}
+    return { messages: state.messages}
 }
 
 export default connect(mapStateToProps, { deleteAll })(Panel);
