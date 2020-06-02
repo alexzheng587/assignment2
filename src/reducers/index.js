@@ -18,6 +18,7 @@ const messageListReducer = (messages = myObject.messages, action) => {		// set d
     if (action.type === 'ADD_MESSAGE') {
         return messages.concat(action.messageText);
     }
+    // duplicate array
     let tmp = messages.slice(0);
     if (action.type === 'DELETE_MESSAGE') {
         tmp.splice(action.messageId, 1);

@@ -16,15 +16,14 @@ let AddMessage = ({ dispatch }) => {
                         return;
                     dispatch(addMessage(input.value));
                     // reset value
-                    input.value = '';
-                }}>
-		<textarea
-            ref={node => {
-                input = node
-            }}
-            className="text_input"/>
+                    input.value = ''; }}>
+                <textarea
+                    ref={node => {
+                        input = node
+                    }}
+                    className="text_input"/>
                 <input type="reset" value="Clear" className="control"/>
-                <button type="submit" className="control">Add</button>
+                <input type="submit" value="Add" className="control"/>
             </form>
         </div>
     )
