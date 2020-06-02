@@ -1,0 +1,67 @@
+h1, h2 {
+    color: #0e191d;
+}
+
+body {
+    background-image: url('../background.jpg');
+}
+
+.panel {
+    background-color: #ececee;
+    border-radius: 5px;
+}
+
+button, input {
+    background-color: #c2bd76;
+}
+
+.text_input {
+    width: 200px;
+    height: 100px;
+    background-color: #c2bd76;
+}
+
+.control {
+    width: 100px;
+}
+
+.msgLine {
+    margin-top: 10px;
+}
+
+.msgLine button {
+    vertical-align: middle;
+}
+
+.msgLine span {
+    display: inline-block;
+    width: 450px;
+    margin-left: 5px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 45px;
+}
+
+#main_panel {
+    padding: 10px;
+    /*#F2AB58*/
+}
+
+#menu_side {
+    float: left;
+    width: 200px;
+    margin-right:10px;
+    padding: 10px;
+}
+
+#content_side {
+    float:left;
+    width: 500px;
+    padding: 10px;
+}
+
+#detail_view {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
