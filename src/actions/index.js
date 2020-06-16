@@ -1,7 +1,7 @@
-export const addMessage = ( messageText ) => {
+export const addMessage = (messageObj ) => {
     return({
         type : 'ADD_MESSAGE',
-        messageText
+        messageObj: messageObj
     });
 };
 

@@ -4,6 +4,10 @@ import { addMessage } from '../actions'
 
 let AddMessage = ({ dispatch }) => {
     let input;
+    let msg_obj;
+    let username;
+    let d = new Date();
+    let date = d.getFullYear().toString() + "-" + d.getMonth().toString() + "-" + d.getDay().toString();
     return (
         <div id="menu_side" className="panel">
             <h2>Enter Message Here</h2>
@@ -14,9 +18,17 @@ let AddMessage = ({ dispatch }) => {
                     // prevent adding empty string
                     if (input.value === "")
                         return;
-                    dispatch(addMessage(input.value));
+                    msg_obj = {
+                        "message": input.value,
+                        "date": date,
+                        "username": username.value
+                    };
+                    dispatch(addMessage(msg_obj));
                     // reset value
                     input.value = ''; }}>
+                <label htmlFor="uname"><b>Username</b></label>
+                <input ref={node => {username = node}}
+                    type="text" placeholder="Enter Username" name="uname" required/>
                 <textarea
                     ref={node => {
                         input = node
