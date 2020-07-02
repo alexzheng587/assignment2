@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 
 const server = 'cluster0-htlvb.mongodb.net'; // REPLACE WITH YOUR DB SERVER
-const database = 'messages';      // REPLACE WITH YOUR DB NAME
+const database = 'Messages';      // REPLACE WITH YOUR DB NAME
 
 class Database {
     constructor() {
@@ -9,7 +9,7 @@ class Database {
     }
 
     _connect() {
-        mongoose.connect(`mongodb://${server}/${database}`)
+        mongoose.connect(`mongodb+srv://m001-student:m001-mongodb-basics@${server}/${database}`)
             .then(() => {
                 console.log('Database connection successful')
             })
@@ -19,4 +19,4 @@ class Database {
     }
 }
 
-module.exports = new Database()
+module.exports = new Database();

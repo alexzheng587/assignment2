@@ -1,16 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import AddMessage from './addmessage';
 import Panel from './panel';
 import './static.css'
+import { setInitialMessagesState } from '../actions/index';
+import { connect } from 'react-redux';
 
-const App = () => {
-  return (
-      <div id="main_panel">
-        <h1>Assignment 2</h1>
-        <AddMessage/>
-        <Panel/>
-      </div>
-  );
+// const App = () => {
+//   return (
+//       <div id="main_panel">
+//         <h1>Assignment 2</h1>
+//         <AddMessage/>
+//         <Panel/>
+//       </div>
+//   );
+// }
+//
+// export default App;
+
+class App extends Component {
+
+    getInitialMessages(dispatch) {
+        fetch("http://localhost:9000/api/message")
+            .then((res) => {
+                return res.json()
+                    .then((res) => {
+                        dispatch(setInitialMessagesState(res));
+                    });
+            })
+    }
+
+    componentWillMount() {
+        this.getInitialMessages(this.props.dispatch);
+    }
+
+    render() {
+        return (
+            <div id="main_panel">
+                <h1>Assignment 2</h1>
+                <AddMessage/>
+                <Panel/>
+            </div>
+        );
+    }
 }
 
-export default App;
+export default connect()(App);

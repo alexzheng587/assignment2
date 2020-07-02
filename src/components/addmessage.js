@@ -4,7 +4,6 @@ import { addMessage } from '../actions'
 
 let AddMessage = ({ dispatch }) => {
     let input;
-    let msg_obj;
     let username;
     let d = new Date();
     let date = d.getFullYear().toString() + "-" + d.getMonth().toString() + "-" + d.getDay().toString();
@@ -18,12 +17,7 @@ let AddMessage = ({ dispatch }) => {
                     // prevent adding empty string
                     if (input.value === "")
                         return;
-                    msg_obj = {
-                        "message": input.value,
-                        "date": date,
-                        "username": username.value
-                    };
-                    dispatch(addMessage(msg_obj));
+                    dispatch(addMessage(input.value, username.value, date));
                     // reset value
                     input.value = ''; }}>
                 <label htmlFor="uname"><b>Username</b></label>

@@ -28,9 +28,9 @@ class Details extends React.Component {
             return (
                 <div id="details" className="panel">
                     <button onClick={this.hideDetails}>Show Less</button>
-                    <p id="detail_view">{this.props.message['message']}</p>
                     <p id="detail_view">{this.props.message['date']}</p>
                     <p id="detail_view">{this.props.message['username']}</p>
+                    <p id="detail_view">{this.props.message['message']}</p>
                 </div>
             )
         }
