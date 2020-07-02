@@ -9,7 +9,7 @@ class Message extends Component {
         // using classname since id is taken up by messageId
         return (
             <div id={this.props.messageId} className="messageLine">
-                <button onClick={() => this.props.deleteMessage(this.props.messageId, this.props.messageObj["id"])} type="button">Delete</button>
+                <button onClick={() => this.props.deleteMessage(this.props.messageId, this.props.messageObj["_id"])} type="button">Delete</button>
                 <Details message={this.props.messageObj}/>
                 <EditMessage messageId={this.props.messageId} message={this.props.messageObj}/>
             </div>

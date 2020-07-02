@@ -32,7 +32,7 @@ const messageListReducer = (state = initialState, action) => {		// set default i
                 message: action.message,
                 date: action.date,
                 username: action.username,
-                id: action.id
+                _id: action.id
             })
     }
     // duplicate array

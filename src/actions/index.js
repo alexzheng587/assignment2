@@ -44,7 +44,7 @@ export const addToList = (text, username, timestamp, id) => {
         message: text,
         date: timestamp,
         username: username,
-        id: id
+        _id: id
     };
     return ({
         ...message,
@@ -92,7 +92,7 @@ export const editMessage = (oldMessage, newMessageText, messageId) => {
         ...oldMessage,
         message: newMessageText
     }
-    fetch('http://localhost:9000/api/message/' + oldMessage["id"], {
+    fetch('http://localhost:9000/api/message/' + oldMessage["_id"], {
         method: 'PUT',
         mode: 'cors',
         cache: 'no-cache',
