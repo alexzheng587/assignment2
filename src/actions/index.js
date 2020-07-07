@@ -82,6 +82,17 @@ export const deleteMessage = ( messageId, id ) => {
 };
 
 export const deleteAll = () => {
+    fetch('http://localhost:9000/api/delete/', {
+        method: 'DELETE',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        redirect: 'follow',
+        referrer: 'no-referrer'
+    });
     return({
         type : 'DELETE_ALL'
     });
@@ -106,7 +117,7 @@ export const editMessage = (oldMessage, newMessageText, messageId) => {
     });
     return {
         type: "EDIT_MESSAGE",
-        newMessageText,
+        editedMessage,
         messageId
     }
 };

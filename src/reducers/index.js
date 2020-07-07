@@ -32,7 +32,7 @@ const messageListReducer = (state = initialState, action) => {		// set default i
                 message: action.message,
                 date: action.date,
                 username: action.username,
-                _id: action.id
+                _id: action._id
             })
     }
     // duplicate array
@@ -43,7 +43,7 @@ const messageListReducer = (state = initialState, action) => {		// set default i
     }
 
     if (action.type === 'EDIT_MESSAGE') {
-        tmp[action.messageId].message = action.newMessageText;
+        tmp[action.messageId] = action.editedMessage;
         return tmp;
     }
 
@@ -51,10 +51,10 @@ const messageListReducer = (state = initialState, action) => {		// set default i
         tmp = action.initialMessages.data;
         return tmp;
     }
-    // if (action.type === 'DELETE_ALL') {
-    //     tmp = [];
-    //     return tmp;
-    // }
+    if (action.type === 'DELETE_ALL') {
+        tmp = [];
+        return tmp;
+    }
     return state;
 }
 

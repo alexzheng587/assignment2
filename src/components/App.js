@@ -23,10 +23,11 @@ class App extends Component {
         fetch("http://localhost:9000/api/message")
             .then((res) => {
                 return res.json()
-                    .then((res) => {
-                        dispatch(setInitialMessagesState(res));
-                    });
             })
+            .then((res) => {
+            dispatch(setInitialMessagesState(res));
+        }).catch(err =>
+        console.log("error trying to get"));
     }
 
     componentWillMount() {

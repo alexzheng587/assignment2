@@ -112,10 +112,21 @@ getMessages = async (req, res) => {
     }).catch(err => console.log(err))
 };
 
+deleteAll = async (req, res) => {
+    await Message.deleteMany({}, err => {
+            if (err) {
+            console.log(err)
+        } else {
+            res.end('success');
+        }
+    }).catch(err => console.log(err))
+};
+
 module.exports = {
     createMessages,
     updateMessages,
     deleteMessages,
     getMessages,
     getMessagesById,
+    deleteAll,
 }

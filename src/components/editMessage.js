@@ -20,7 +20,7 @@ class EditMessage extends React.Component {
         let input;
         if (this.state.visible) {
             return (
-                <div id="details" className="panel">
+                <div id="menu_side" className="panel">
                     <button onClick={this.toggleEdit}>Stop Editing</button>
                     <form
                         onSubmit={event => {
