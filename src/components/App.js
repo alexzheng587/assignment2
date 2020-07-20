@@ -20,7 +20,7 @@ import { connect } from 'react-redux';
 class App extends Component {
 
     getInitialMessages(dispatch) {
-        fetch("http://localhost:9000/api/message")
+        fetch("/api/message")
             .then((res) => {
                 return res.json()
             })

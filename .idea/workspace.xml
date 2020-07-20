@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3ffb9f00-1de2-4cb7-b8dd-991a227fde4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +51,7 @@
       <recent name="C:\Users\alex_\WebstormProjects\assignment2\src\components" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Debug Application">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -101,7 +103,7 @@
       <workItem from="1594361640703" duration="2820000" />
       <workItem from="1594938749208" duration="191000" />
       <workItem from="1594941004800" duration="5541000" />
-      <workItem from="1595202121066" duration="1331000" />
+      <workItem from="1595202121066" duration="2767000" />
     </task>
     <task id="LOCAL-00001" summary="Added clear all messages button">
       <created>1591067287974</created>

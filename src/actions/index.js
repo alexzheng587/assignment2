@@ -12,7 +12,7 @@ export function addMessage(text, username = "Anonymous", timestamp) {
             date: timestamp,
             username: username
         };
-        fetch("http://localhost:9000/api/message", {
+        fetch("/api/message", {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
@@ -53,7 +53,7 @@ export const addToList = (text, username, timestamp, id) => {
 }
 
 export const loadMessages = () => dispatch => {
-    return fetch(`http://localhost:9000/api/message`)
+    return fetch(`/api/message`)
         .then(res =>
             res.json()
                 .then(
@@ -64,7 +64,7 @@ export const loadMessages = () => dispatch => {
 };
 
 export const deleteMessage = ( messageId, id ) => {
-    fetch('http://localhost:9000/api/message/' + id, {
+    fetch('/api/message/' + id, {
         method: 'DELETE',
         mode: 'cors',
         cache: 'no-cache',
@@ -82,7 +82,7 @@ export const deleteMessage = ( messageId, id ) => {
 };
 
 export const deleteAll = () => {
-    fetch('http://localhost:9000/api/delete/', {
+    fetch('/api/delete/', {
         method: 'DELETE',
         mode: 'cors',
         cache: 'no-cache',
@@ -103,7 +103,7 @@ export const editMessage = (oldMessage, newMessageText, messageId) => {
         ...oldMessage,
         message: newMessageText
     }
-    fetch('http://localhost:9000/api/message/' + oldMessage["_id"], {
+    fetch('/api/message/' + oldMessage["_id"], {
         method: 'PUT',
         mode: 'cors',
         cache: 'no-cache',
