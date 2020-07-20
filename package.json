@@ -27,7 +27,7 @@
     "uuidv4": "^6.1.0"
   },
   "scripts": {
-    "start": "react-scripts start | node server/app.js",
+    "start": "react-scripts start | node server/bin/www",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
